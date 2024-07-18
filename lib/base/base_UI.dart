@@ -1,7 +1,9 @@
+import 'package:daytrade/base/base_vm.dart';
+import 'package:daytrade/locator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class BaseView<T extends ChangeNotifier> extends StatefulWidget {
+class BaseView<T extends BaseViewModel> extends StatefulWidget {
   final Widget Function(BuildContext context, T model, Widget? child) builder;
   final Function(T) onModelReady;
   final bool notDefaultLoading;
@@ -12,11 +14,12 @@ class BaseView<T extends ChangeNotifier> extends StatefulWidget {
   _BaseViewState<T> createState() => _BaseViewState<T>();
 }
 
-class _BaseViewState<T extends ChangeNotifier> extends State<BaseView<T>> {
-  T model = Provider.of<T>(null, listen: false);
+class _BaseViewState<T extends BaseViewModel> extends State<BaseView<T>> {
+  T model = locator<T>();
 
   @override
   void initState() {
+    super.initState();
     if (widget.onModelReady != null) {
       widget.onModelReady(model);
     }

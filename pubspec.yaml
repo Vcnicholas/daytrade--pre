@@ -18,10 +18,21 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   provider: ^6.1.2
+  get_it: ^7.7.0
+  firebase_auth: ^5.1.2
+  flutter_screenutil: ^5.9.3
+  oktoast: ^3.4.0
+  get_storage: ^2.1.1
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/logo.png"
 
 
   flutter_lints: ^3.0.0
