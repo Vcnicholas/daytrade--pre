@@ -1,5 +1,6 @@
 import 'package:daytrade/onboarding/onboarding_vm.dart';
 import 'package:daytrade/utils/app_colors.dart';
+import 'package:daytrade/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -102,7 +103,7 @@ class OnBoardingScreen extends StatelessWidget {
                                 AppText(
                                   " A Thoughtful Journey Towards Inner Peace and\nEmotional Resilience Awaits You.",
                                   align: TextAlign.center,
-                                  size: FontSize.s14.sp,
+                                  size: 14.sp,
                                 ),
                                 Gap(20.sp),
                                 Container(
